@@ -18,20 +18,16 @@ namespace WebGet
         {
             InitializeComponent();
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
-
             WebClient wc = new WebClient();
             try
             {
-
                 wc.Encoding = Encoding.UTF8;
                 if (textBox2.Text == "")
                 {
