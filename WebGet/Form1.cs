@@ -35,7 +35,7 @@ namespace WebGet
                 wc.Encoding = Encoding.UTF8;
                 if (textBox2.Text == "")
                 {
-
+                    textBox1.Text = "Please enter the URL.";
                 }
                 else
                 {
