@@ -24,6 +24,7 @@ namespace WebGet
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            webBrowser1.Navigate(URL);
             textBox1.Text = "";
             WebClient wc = new WebClient();
             try
@@ -44,7 +45,6 @@ namespace WebGet
                 textBox1.Text += exc.Message;
             }
         }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             URL = textBox2.Text;
@@ -53,6 +53,12 @@ namespace WebGet
         public void Form1_Load(object sender, EventArgs e)
         {
             string URL;
+            webBrowser1.ScriptErrorsSuppressed = false;
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
         }
     }
 }
